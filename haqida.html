@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maktab Haqida | 1-sonli Ixtisoslashtirilgan Davlat Maktabi</title>
+  <title>Maktab Haqida | 1-maktab</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -152,10 +152,12 @@
           </a>
         </div>
 
-        <div class="flex xl:hidden">
-          <button id="mobile-menu-btn" class="p-2.5 rounded-xl bg-navy-800 text-gold-400">
-            <i class="fa-solid fa-bars text-xl"></i>
-          </button>
+        <!-- Mobil Aloqa tugmasi (Faqat mobil va planshetda - 3 qatorli menyu o'rniga) -->
+        <div class="flex xl:hidden items-center">
+          <a href="aloqa.html" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-bold text-xs shadow-md transition border border-gold-400/40">
+            <i class="fa-solid fa-headset text-navy-900 text-sm"></i>
+            <span>Aloqa</span>
+          </a>
         </div>
 
       </div>
