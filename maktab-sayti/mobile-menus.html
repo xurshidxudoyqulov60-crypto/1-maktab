@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Menu Styles in UI Design | Namoyish & Ko‘rgazma</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: '#050B14', 900: '#0B192C', 850: '#0E2038', 800: '#112A46', 700: '#1E3E62', 600: '#295280' },
+            gold: { 300: '#FDE68A', 400: '#F6D060', 500: '#E5A93C', 600: '#C88A22', 700: '#9E6714' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 antialiased flex flex-col min-h-screen pb-24">
+
+  <!-- TOP HEADER -->
+  <header class="header-glass sticky top-0 z-50 py-4 px-6 border-b border-navy-700">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 text-white">
+        <i class="fa-solid fa-arrow-left text-gold-400"></i>
+        <span class="text-sm font-bold">Maktab Bosh Sahifasiga Qaytish</span>
+      </a>
+      <div class="flex items-center gap-2">
+        <button class="open-grid-trigger p-2 rounded-lg bg-navy-800 text-gold-400 border border-navy-600"><i class="fa-solid fa-grip"></i></button>
+        <button id="three-dots-btn" class="p-2 rounded-lg bg-navy-800 text-white border border-navy-600"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+        <div id="three-dots-menu" class="three-dots-menu">
+          <a href="#" class="open-sheet-trigger block px-3 py-2 text-xs text-slate-200 hover:bg-navy-700 rounded-lg">Bottom Sheet</a>
+          <a href="#" class="open-rectangular-trigger block px-3 py-2 text-xs text-slate-200 hover:bg-navy-700 rounded-lg">Rectangular Tiles</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TITLE -->
+  <section class="bg-academic-pattern text-white py-12 border-b border-navy-700 text-center px-4">
+    <span class="badge-gold text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">UI / UX Showcase</span>
+    <h1 class="font-academic text-3xl sm:text-5xl font-bold mt-3">
+      Mobile Menu Styles in UI Design
+    </h1>
+    <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl mx-auto">
+      Quyidagi 8 ta mobil navigatsiya uslubining har birini sinab ko‘ring va ularning interaktiv imkoniyatlarini baholang.
+    </p>
+  </section>
+
+  <!-- 8 TA USLUB KARTOCHKALARI VA TEST TUGMALARI -->
+  <main class="max-w-5xl mx-auto px-4 py-12 space-y-6 flex-grow">
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- 1. Grid Menu -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 academic-card flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl mb-3">
+            <i class="fa-solid fa-grip"></i>
+          </div>
+          <h3 class="font-bold text-navy-900 text-base">1. Grid Menu</h3>
+          <p class="text-xs text-slate-500 mt-1">App launcher / Launchpad uslubidagi 3x3 toza piktogrammali ilova menyusi.</p>
+        </div>
+        <button class="open-grid-trigger mt-4 w-full bg-navy-800 hover:bg-gold-600 hover:text-navy-900 text-white font-bold text-xs py-2.5 rounded-xl transition">
+          Grid Menyuni Ochish
+        </button>
+      </div>
+
+      <!-- 2. Side Menu (Drawer) -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 academic-card flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl mb-3">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <h3 class="font-bold text-navy-900 text-base">2. Side Menu</h3>
+          <p class="text-xs text-slate-500 mt-1">Yon tomondan surilib ochiladigan klassik ierarxik navigatsiya darchasi.</p>
+        </div>
+        <button id="mobile-menu-btn" class="mt-4 w-full bg-navy-800 hover:bg-gold-600 hover:text-navy-900 text-white font-bold text-xs py-2.5 rounded-xl transition">
+          Side Drawerni Ochish
+        </button>
+      </div>
+
+      <!-- 3. Tab Bar -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 academic-card flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl mb-3">
+            <i class="fa-solid fa-table-columns"></i>
+          </div>
+          <h3 class="font-bold text-navy-900 text-base">3. Tab Bar</h3>
+          <p class="text-xs text-slate-500 mt-1">Ekranning eng pastida joylashgan tezkor 5 talik barmoq osti boshqaruvi.</p>
+        </div>
+        <div class="mt-4 text-center text-xs font-bold text-emerald-600 bg-emerald-50 py-2 rounded-xl">
+          Pastki ekranda faol
+        </div>
+      </div>
+
+      <!-- 4. FAB -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 academic-card flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl mb-3">
+            <i class="fa-solid fa-circle-plus"></i>
+          </div>
+          <h3 class="font-bold text-navy-900 text-base">4. FAB (Floating)</h3>
+          <p class="text-xs text-slate-500 mt-1">O‘ng pastki burchakdagi suzuvchi tugma, bosilganda tezkor amallar yoyiladi.</p>
+        </div>
+        <div class="mt-4 text-center text-xs font-bold text-amber-600 bg-amber-50 py-2 rounded-xl">
+          O‘ng pastdagi (+) tugma
+        </div>
+      </div>
+
+      <!-- 5. Sheet (Bottom Sheet) -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 academic-card flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl mb-3">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <h3 class="font-bold text-navy-900 text-base">5. Bottom Sheet</h3>
+          <p class="text-xs text-slate-500 mt-1">Pastdan yuqoriga sirg‘alib chiquvchi zamonaviy modal karta paneli.</p>
+        </div>
+        <button class="open-sheet-trigger mt-4 w-full bg-navy-800 hover:bg-gold-600 hover:text-navy-900 text-white font-bold text-xs py-2.5 rounded-xl transition">
+          Bottom Sheetni Ochish
+        </button>
+      </div>
+
+      <!-- 6. Three Dots (⋮) -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 academic-card flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl mb-3">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+          <h3 class="font-bold text-navy-900 text-base">6. Three Dots</h3>
+          <p class="text-xs text-slate-500 mt-1">Overflow kontekst menyusi: qo‘shimcha amallar va tezkor sozlamalar.</p>
+        </div>
+        <div class="mt-4 text-center text-xs font-bold text-blue-600 bg-blue-50 py-2 rounded-xl">
+          Tepadagi (⋮) tugma
+        </div>
+      </div>
+
+      <!-- 7. Rectangular (Tiles) -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 academic-card flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl mb-3">
+            <i class="fa-solid fa-table-cells-large"></i>
+          </div>
+          <h3 class="font-bold text-navy-900 text-base">7. Rectangular</h3>
+          <p class="text-xs text-slate-500 mt-1">Katta to‘rtburchak blokli va plitkali ergonomik navigatsiya moduli.</p>
+        </div>
+        <button class="open-rectangular-trigger mt-4 w-full bg-navy-800 hover:bg-gold-600 hover:text-navy-900 text-white font-bold text-xs py-2.5 rounded-xl transition">
+          Tiles Menyuni Ochish
+        </button>
+      </div>
+
+      <!-- 8. Rudder Navigation -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 academic-card flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl mb-3">
+            <i class="fa-solid fa-compass"></i>
+          </div>
+          <h3 class="font-bold text-navy-900 text-base">8. Rudder (Radial)</h3>
+          <p class="text-xs text-slate-500 mt-1">Markaziy kompas / boshqaruv ruli atrofida 5 ta yoy shaklida ochiladi.</p>
+        </div>
+        <div class="mt-4 text-center text-xs font-bold text-gold-700 bg-gold-100 py-2 rounded-xl">
+          Markaziy rul tugmasi
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- BOTTOM TAB BAR (Modern Academic Luxury - Royal Sapphire & Gold Pill) -->
+  <nav id="mobile-tab-bar" class="mobile-tab-bar">
+    <div class="tab-spotlight"></div>
+    <a href="index.html" class="mobile-tab-item active" title="Bosh sahifa">
+      <i class="fa-solid fa-house"></i>
+      <span>Asosiy</span>
+    </a>
+    <a href="yutuqlar.html" class="mobile-tab-item" title="Yutuqlar">
+      <i class="fa-solid fa-trophy"></i>
+      <span>Yutuqlar</span>
+    </a>
+    <a href="#" class="mobile-tab-item open-sheet-trigger" data-action="sheet" title="Xizmatlar">
+      <i class="fa-solid fa-layer-group"></i>
+      <span>Xizmatlar</span>
+    </a>
+    <a href="haqida.html" class="mobile-tab-item" title="Maktab">
+      <i class="fa-solid fa-landmark"></i>
+      <span>Maktab</span>
+    </a>
+    <a href="#" class="mobile-tab-item open-grid-trigger" data-action="grid" title="Menyu">
+      <i class="fa-solid fa-bars"></i>
+      <span>Menyu</span>
+    </a>
+  </nav>
+
+  <!-- FAB -->
+  <div id="fab-container" class="fab-container">
+    <div class="fab-options">
+      <a href="aloqa.html" class="fab-option-item">
+        <span class="fab-label">Ariza qoldirish</span>
+        <div class="fab-mini-btn bg-gold-500 text-navy-900"><i class="fa-solid fa-pen-nib"></i></div>
+      </a>
+      <a href="tel:+998712001122" class="fab-option-item">
+        <span class="fab-label">Qo‘ng‘iroq</span>
+        <div class="fab-mini-btn"><i class="fa-solid fa-phone"></i></div>
+      </a>
+      <a href="#" class="fab-option-item open-sheet-trigger">
+        <span class="fab-label">Tezkor sheet</span>
+        <div class="fab-mini-btn"><i class="fa-solid fa-sliders"></i></div>
+      </a>
+    </div>
+    <button id="fab-main-btn" class="fab-main-btn">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+  </div>
+
+  <!-- BOTTOM SHEET -->
+  <div id="bottom-sheet-backdrop" class="bottom-sheet-backdrop"></div>
+  <div id="bottom-sheet-modal" class="bottom-sheet-modal">
+    <div class="bottom-sheet-drag-handle"></div>
+    <div class="p-6">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+        <h3 class="font-academic text-xl font-bold text-navy-900">Bottom Sheet UI</h3>
+        <button id="close-sheet-btn" class="p-1 text-slate-400 hover:text-navy-900"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <div class="grid grid-cols-2 gap-3 mt-4">
+        <a href="aloqa.html" class="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs font-bold text-navy-900 flex items-center gap-2">
+          <i class="fa-solid fa-file-pen text-gold-600"></i> Ariza berish
+        </a>
+        <a href="oquvchilar.html" class="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs font-bold text-navy-900 flex items-center gap-2">
+          <i class="fa-solid fa-award text-gold-600"></i> Yutuqlarimiz
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRID MENU -->
+  <div id="grid-menu-modal" class="grid-menu-modal">
+    <div class="grid-menu-box">
+      <div class="flex items-center justify-between pb-3 border-b border-navy-700/80 mb-4">
+        <span class="text-white font-bold text-sm">Grid App Launcher</span>
+        <button id="close-grid-btn" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+      <div class="grid grid-cols-3 gap-3 text-center">
+        <a href="index.html" class="grid-app-item"><i class="fa-solid fa-school text-gold-400 text-xl mb-1"></i><span class="text-[11px]">Asosiy</span></a>
+        <a href="haqida.html" class="grid-app-item"><i class="fa-solid fa-landmark text-gold-400 text-xl mb-1"></i><span class="text-[11px]">Tarix</span></a>
+        <a href="rahbariyat.html" class="grid-app-item"><i class="fa-solid fa-user-tie text-gold-400 text-xl mb-1"></i><span class="text-[11px]">Rahbar</span></a>
+        <a href="oquvchilar.html" class="grid-app-item"><i class="fa-solid fa-star text-gold-400 text-xl mb-1"></i><span class="text-[11px]">Iqtidor</span></a>
+        <a href="galereya.html" class="grid-app-item"><i class="fa-solid fa-images text-gold-400 text-xl mb-1"></i><span class="text-[11px]">Media</span></a>
+        <a href="aloqa.html" class="grid-app-item"><i class="fa-solid fa-phone text-gold-400 text-xl mb-1"></i><span class="text-[11px]">Aloqa</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- RECTANGULAR MENU -->
+  <div id="rectangular-menu-modal" class="rectangular-menu-modal">
+    <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-200">
+      <span class="font-bold text-xs text-navy-900">Rectangular Tiles</span>
+      <button id="close-rectangular-btn" class="text-slate-400"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="grid grid-cols-2 gap-2">
+      <a href="index.html" class="rectangular-tile"><i class="fa-solid fa-house text-gold-600"></i> Bosh sahifa</a>
+      <a href="aloqa.html" class="rectangular-tile"><i class="fa-solid fa-envelope text-gold-600"></i> Ariza</a>
+    </div>
+  </div>
+
+  <!-- RUDDER MENU -->
+  <div id="rudder-overlay" class="rudder-overlay"></div>
+  <div id="rudder-menu-wrapper" class="rudder-menu-wrapper">
+    <a href="index.html" class="rudder-node rudder-node-1"><i class="fa-solid fa-house"></i></a>
+    <a href="rahbariyat.html" class="rudder-node rudder-node-2"><i class="fa-solid fa-users"></i></a>
+    <a href="oquvchilar.html" class="rudder-node rudder-node-3"><i class="fa-solid fa-award"></i></a>
+    <a href="galereya.html" class="rudder-node rudder-node-4"><i class="fa-solid fa-camera"></i></a>
+    <a href="aloqa.html" class="rudder-node rudder-node-5"><i class="fa-solid fa-phone"></i></a>
+    <button id="rudder-center-btn" class="rudder-center-btn" title="Rudder Navigation">
+      <i class="fa-solid fa-compass"></i>
+    </button>
+  </div>
+
+  <!-- SIDE MENU DRAWER -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-navy-900/90 backdrop-blur-md">
+    <div class="fixed inset-y-0 right-0 max-w-xs w-full bg-navy-800 p-6 overflow-y-auto">
+      <div class="flex justify-between items-center pb-4 border-b border-navy-700">
+        <span class="font-crest text-white font-bold">SIDE MENU</span>
+        <button id="mobile-menu-close" class="text-slate-400"><i class="fa-solid fa-xmark text-2xl"></i></button>
+      </div>
+      <div class="mt-4 flex flex-col space-y-2">
+        <a href="index.html" class="text-slate-300 py-2">Bosh sahifa</a>
+        <a href="haqida.html" class="text-slate-300 py-2">Maktab haqida</a>
+        <a href="rahbariyat.html" class="text-slate-300 py-2">Rahbariyat</a>
+        <a href="oquvchilar.html" class="text-slate-300 py-2">O‘quvchilar</a>
+        <a href="aloqa.html" class="text-slate-300 py-2">Aloqa</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

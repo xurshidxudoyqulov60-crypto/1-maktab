@@ -1,0 +1,675 @@
+/* Modern Academic Theme Styles - Luxury Ivy League / Imperial Tier */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap');
+
+:root {
+  --navy-950: #050B14;
+  --navy-900: #0B192C;
+  --navy-850: #0E2038;
+  --navy-800: #112A46;
+  --navy-700: #1E3E62;
+  --navy-600: #2E5B88;
+  --gold-300: #FDE68A;
+  --gold-400: #F6D060;
+  --gold-500: #E5A93C;
+  --gold-600: #C88A22;
+  --gold-700: #9E6714;
+  --gold-gradient: linear-gradient(135deg, #FFF0B3 0%, #F6D060 35%, #D49826 70%, #9E6714 100%);
+  --gold-border: rgba(246, 208, 96, 0.35);
+  --card-bg: #FFFFFF;
+  --canvas-bg: #F8FAFC;
+}
+
+/* Smooth Scrolling & Hardware Acceleration */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* Header balandligiga mos */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #1E293B;
+  background-color: #F8FAFC;
+  overflow-x: hidden;
+  padding-bottom: 0; /* Desktopda toza 0 padding */
+}
+
+@media (max-width: 1279px) {
+  body {
+    padding-bottom: 90px; /* Faqat mobil va planshetda suzuvchi Navigation Tabs V2 uchun joy */
+  }
+}
+
+.font-academic {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-crest {
+  font-family: 'Cinzel', serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1E3E62;
+}
+
+/* Academic Pattern Background - Deep Royal Sapphire Texture */
+.bg-academic-pattern {
+  background-color: #070F1B;
+  background-image: 
+    radial-gradient(circle at 50% 10%, rgba(30, 62, 98, 0.6) 0%, transparent 65%),
+    radial-gradient(circle at 85% 85%, rgba(229, 169, 60, 0.09) 0%, transparent 45%),
+    radial-gradient(rgba(246, 208, 96, 0.18) 1.2px, transparent 0);
+  background-size: 100% 100%, 100% 100%, 28px 28px;
+}
+
+/* Glassmorphism Header - Hardware Accelerated */
+.header-glass {
+  background: rgba(11, 25, 44, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(246, 208, 96, 0.22);
+  box-shadow: 0 10px 30px -5px rgba(5, 11, 20, 0.45);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Desktop Dropdown Menu Animations */
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px) translateZ(0);
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #0E2038 !important;
+  border: 1px solid rgba(246, 208, 96, 0.3) !important;
+  box-shadow: 0 16px 36px -8px rgba(5, 11, 20, 0.6) !important;
+  pointer-events: none;
+  will-change: opacity, transform;
+}
+
+.dropdown-group:hover .dropdown-menu,
+.dropdown-group:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) translateZ(0);
+}
+
+/* Card Hover Elevation - Luxury Polish */
+.academic-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  background: #FFFFFF;
+  box-shadow: 0 4px 20px -2px rgba(11, 25, 44, 0.04);
+  position: relative;
+}
+.academic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 38px -10px rgba(11, 25, 44, 0.11), 0 4px 12px rgba(229, 169, 60, 0.08);
+  border-color: rgba(229, 169, 60, 0.5);
+}
+
+/* Gold Gradient Text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF2B2 0%, #F6D060 40%, #D49826 75%, #9E6714 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  background-color: rgba(5, 11, 20, 0.95);
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.lightbox-modal.active {
+  display: flex;
+}
+
+.badge-gold {
+  background: linear-gradient(135deg, rgba(246, 208, 96, 0.14) 0%, rgba(200, 138, 34, 0.08) 100%);
+  color: #C88A22;
+  border: 1px solid rgba(246, 208, 96, 0.45);
+  box-shadow: 0 2px 8px rgba(229, 169, 60, 0.12);
+}
+
+/* ==========================================================================
+   MOBILE MENU STYLES IN UI DESIGN
+   ========================================================================== */
+
+/* 1. BOTTOM TAB BAR (Modern Academic Luxury - Floating Royal Sapphire & Gold Pill) - Faqat mobil va planshetda */
+.mobile-tab-bar {
+  display: none !important;
+}
+
+@media (max-width: 1279px) {
+  .mobile-tab-bar {
+    position: fixed;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%) translateZ(0);
+    width: calc(100% - 28px);
+    max-width: 400px;
+    height: 66px;
+    background: rgba(11, 25, 44, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 40px;
+    border: 1px solid rgba(246, 208, 96, 0.35);
+    display: flex !important;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 8px;
+    z-index: 50;
+    box-shadow: 0 16px 36px -6px rgba(5, 11, 20, 0.75), 0 0 20px rgba(229, 169, 60, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+    will-change: transform;
+  }
+}
+
+/* Spotlight Glowing Cone from Top - Imperial Gold Luster */
+.tab-spotlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+  transform: translateZ(0);
+  z-index: 1;
+}
+
+.tab-spotlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 3.5px;
+  background: linear-gradient(90deg, #F6D060, #E5A93C);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 0 14px 3px rgba(246, 208, 96, 0.85);
+}
+
+.tab-spotlight::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 56px;
+  background: radial-gradient(ellipse at top, rgba(246, 208, 96, 0.45) 0%, rgba(229, 169, 60, 0.16) 45%, transparent 75%);
+  filter: blur(4px);
+}
+
+.mobile-tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: #94A3B8;
+  text-decoration: none;
+  position: relative;
+  width: 20%;
+  height: 100%;
+  z-index: 2;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-tab-item i {
+  font-size: 18px;
+  transition: transform 0.25s ease, color 0.25s ease, filter 0.25s ease;
+}
+
+.mobile-tab-item span {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  transition: color 0.25s ease;
+}
+
+.mobile-tab-item:hover {
+  color: #E2E8F0;
+}
+
+.mobile-tab-item.active {
+  color: #F6D060;
+}
+
+.mobile-tab-item.active i {
+  transform: translateY(-2px) scale(1.12);
+  color: #F6D060;
+  filter: drop-shadow(0 0 10px rgba(246, 208, 96, 0.65));
+}
+
+.mobile-tab-item.active span {
+  color: #F6D060;
+  font-weight: 700;
+}
+
+/* 2. FAB (FLOATING ACTION BUTTON) */
+.fab-container {
+  position: fixed;
+  bottom: 78px;
+  right: 18px;
+  z-index: 46;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fab-main-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #E9B642 0%, #C59B27 100%);
+  color: #071326;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 8px 20px rgba(197, 155, 39, 0.45);
+  border: 2px solid #FFF2BD;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+.fab-main-btn:active {
+  transform: scale(0.92);
+}
+.fab-container.active .fab-main-btn {
+  transform: rotate(45deg);
+  background: #0D2240;
+  color: #F9D976;
+  border-color: #C59B27;
+}
+
+.fab-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.85);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.fab-container.active .fab-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.fab-option-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.fab-label {
+  background: rgba(13, 34, 64, 0.95);
+  color: #F8FAFC;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(197, 155, 39, 0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  white-space: nowrap;
+}
+.fab-mini-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #0D2240;
+  color: #F9D976;
+  border: 1px solid #C59B27;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.fab-mini-btn:hover {
+  transform: scale(1.1);
+  background: #183B68;
+}
+
+/* 3. BOTTOM SHEET */
+.bottom-sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 19, 38, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 55;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.bottom-sheet-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bottom-sheet-modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  border-top-left-radius: 26px;
+  border-top-right-radius: 26px;
+  box-shadow: 0 -12px 35px rgba(0, 0, 0, 0.25);
+  z-index: 56;
+  transform: translateY(100%);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+.bottom-sheet-modal.active {
+  transform: translateY(0);
+}
+
+.bottom-sheet-drag-handle {
+  width: 42px;
+  height: 5px;
+  border-radius: 3px;
+  background: #CBD5E1;
+  margin: 12px auto 6px auto;
+  cursor: grab;
+}
+
+/* 4. THREE DOTS (⋮ OVERFLOW MENU) */
+.three-dots-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 220px;
+  background: #0D2240;
+  border: 1px solid rgba(197, 155, 39, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  z-index: 60;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.9) translateY(-6px);
+  transform-origin: top right;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.three-dots-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(8px);
+}
+
+/* 5. GRID MENU (LAUNCHPAD) */
+.grid-menu-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 19, 38, 0.94);
+  backdrop-filter: blur(14px);
+  z-index: 58;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.28s ease;
+}
+.grid-menu-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.grid-menu-box {
+  background: #0D2240;
+  border: 1px solid rgba(197, 155, 39, 0.4);
+  border-radius: 28px;
+  padding: 24px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+  transform: scale(0.92);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.grid-menu-modal.active .grid-menu-box {
+  transform: scale(1);
+}
+
+.grid-app-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 6px;
+  border-radius: 16px;
+  background: rgba(24, 59, 104, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #F8FAFC;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.grid-app-item:hover, .grid-app-item:active {
+  background: rgba(197, 155, 39, 0.2);
+  border-color: rgba(197, 155, 39, 0.5);
+  transform: translateY(-3px);
+}
+
+/* 6. RECTANGULAR MENU (TILES / SEGMENTED) */
+.rectangular-menu-modal {
+  position: fixed;
+  bottom: 74px;
+  left: 16px;
+  right: 16px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F0;
+  border-radius: 22px;
+  padding: 16px;
+  box-shadow: 0 16px 36px rgba(13, 34, 64, 0.2);
+  z-index: 54;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.rectangular-menu-modal.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.rectangular-tile {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #0D2240;
+  font-weight: 700;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+.rectangular-tile:hover {
+  background: #0D2240;
+  color: #FFFFFF;
+  border-color: #C59B27;
+}
+
+/* 7. RUDDER NAVIGATION (RADIAL / STEERING WHEEL MENU) */
+.rudder-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 19, 38, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 48;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+}
+.rudder-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.rudder-menu-wrapper {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 49;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rudder-center-btn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0D2240 0%, #071326 100%);
+  border: 2px solid #E9B642;
+  color: #E9B642;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 0 20px rgba(233, 182, 66, 0.5);
+  cursor: pointer;
+  position: relative;
+  z-index: 52;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s;
+}
+.rudder-menu-wrapper.active .rudder-center-btn {
+  transform: rotate(180deg) scale(1.05);
+  background: #E9B642;
+  color: #0D2240;
+  border-color: #FFFFFF;
+}
+
+/* Radial / Wheel Petals */
+.rudder-node {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0D2240;
+  border: 1.5px solid #E9B642;
+  color: #F8FAFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(0, 0) scale(0.5);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+  z-index: 50;
+}
+.rudder-node:hover {
+  background: #E9B642;
+  color: #071326;
+  border-color: #FFFFFF;
+}
+
+/* Rudder 5 ta radial yo'nalishlari (Arc of circle) */
+.rudder-menu-wrapper.active .rudder-node {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* Tugma 1 (-80 deg) */
+.rudder-menu-wrapper.active .rudder-node-1 {
+  transform: translate(-95px, -35px) scale(1);
+}
+/* Tugma 2 (-40 deg) */
+.rudder-menu-wrapper.active .rudder-node-2 {
+  transform: translate(-65px, -85px) scale(1);
+}
+/* Tugma 3 (0 deg - To'g'ri tepaga) */
+.rudder-menu-wrapper.active .rudder-node-3 {
+  transform: translate(0px, -105px) scale(1);
+}
+/* Tugma 4 (+40 deg) */
+.rudder-menu-wrapper.active .rudder-node-4 {
+  transform: translate(65px, -85px) scale(1);
+}
+/* Tugma 5 (+80 deg) */
+.rudder-menu-wrapper.active .rudder-node-5 {
+  transform: translate(95px, -35px) scale(1);
+}
+
+/* 8. UI MENU STYLE SELECTOR (Demo Bar) */
+.menu-style-switcher {
+  position: fixed;
+  top: 90px;
+  left: 12px;
+  z-index: 44;
+  background: rgba(13, 34, 64, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(197, 155, 39, 0.5);
+  border-radius: 14px;
+  padding: 6px 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #FFFFFF;
+}
+.menu-style-switcher select {
+  background: #071326;
+  color: #F9D976;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1px solid #C59B27;
+  border-radius: 8px;
+  padding: 3px 6px;
+  outline: none;
+}
+
+/* Desktopda (>= 1280px) faqat toza desktop interfeysi ko'rinsin */
+@media (min-width: 1280px) {
+  .fab-container,
+  .rudder-menu-wrapper,
+  .rudder-overlay,
+  .menu-style-switcher,
+  .mobile-tab-bar {
+    display: none !important;
+  }
+}
