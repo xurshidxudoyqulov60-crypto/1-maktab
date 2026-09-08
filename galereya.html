@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotogalereya va Media | 1-sonli Ixtisoslashtirilgan Maktab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#050B14',
+              900: '#0B192C',
+              850: '#0E2038',
+              800: '#112A46',
+              700: '#1E3E62',
+              600: '#2E5B88'
+            },
+            gold: {
+              300: '#FDE68A',
+              400: '#F6D060',
+              500: '#E5A93C',
+              600: '#C88A22',
+              700: '#9E6714'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#FAFCFE] text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- TOP BAR -->
+  <div class="bg-navy-900 text-slate-300 text-xs border-b border-navy-700/60 py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center space-x-6">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-gold-500"></i> Bekobod shahar 1-umumiy o‘rta ta'lim maktabi</span>
+        <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-phone text-gold-500"></i> Tel: 90-330-43-09</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="aloqa.html" class="hover:text-gold-400 transition">Qabul komissiyasi</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 header-glass shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 border border-gold-500/50 flex items-center justify-center shadow-md">
+            <i class="fa-solid fa-graduation-cap text-gold-500 text-2xl"></i>
+          </div>
+          <div>
+            <span class="block font-crest text-lg font-bold tracking-wider text-white uppercase leading-tight">BEKOBOD SHAHAR 1-MAKTAB</span>
+            <span class="block text-[11px] text-gold-400 font-medium tracking-widest uppercase">Umumiy o‘rta ta'lim maktabi</span>
+          </div>
+        </a>
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden xl:flex items-center space-x-1">
+          <a href="index.html" class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-700/40 transition">Bosh sahifa</a>
+          <a href="haqida.html" class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-700/40 transition">Maktab haqida</a>
+
+          <!-- Jamoa Dropdown -->
+          <div class="relative dropdown-group py-2">
+            <button class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-700/40 transition flex items-center gap-1.5 focus:outline-none">
+              <span>Jamoa</span>
+              <i class="fa-solid fa-chevron-down text-[10px] text-gold-400"></i>
+            </button>
+            <div class="dropdown-menu absolute left-0 top-full w-56 bg-navy-800 border border-navy-700/90 rounded-xl shadow-2xl p-2 z-50">
+              <a href="rahbariyat.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-200 hover:bg-navy-700/70 hover:text-gold-400 transition">
+                <i class="fa-solid fa-user-tie text-gold-500 w-5 text-center"></i>
+                <div>
+                  <div class="font-medium leading-none">Rahbariyat</div>
+                  <div class="text-[11px] text-slate-400 mt-1">Direktor va o'rinbosarlar</div>
+                </div>
+              </a>
+              <a href="oqituvchilar.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-200 hover:bg-navy-700/70 hover:text-gold-400 transition">
+                <i class="fa-solid fa-chalkboard-user text-gold-500 w-5 text-center"></i>
+                <div>
+                  <div class="font-medium leading-none">O‘qituvchilar</div>
+                  <div class="text-[11px] text-slate-400 mt-1">Pedagoglar jamoasi</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- O‘quvchilar Dropdown -->
+          <div class="relative dropdown-group py-2">
+            <button class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-700/40 transition flex items-center gap-1.5 focus:outline-none">
+              <span>O‘quvchilar</span>
+              <i class="fa-solid fa-chevron-down text-[10px] text-gold-400"></i>
+            </button>
+            <div class="dropdown-menu absolute left-0 top-full w-60 bg-navy-800 border border-navy-700/90 rounded-xl shadow-2xl p-2 z-50">
+              <a href="oquvchilar.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-200 hover:bg-navy-700/70 hover:text-gold-400 transition">
+                <i class="fa-solid fa-star text-gold-500 w-5 text-center"></i>
+                <div>
+                  <div class="font-medium leading-none">Iqtidorli o‘quvchilar</div>
+                  <div class="text-[11px] text-slate-400 mt-1">Olimpiadachilar va a'lochilar</div>
+                </div>
+              </a>
+              <a href="yutuqlar.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-200 hover:bg-navy-700/70 hover:text-gold-400 transition">
+                <i class="fa-solid fa-trophy text-gold-500 w-5 text-center"></i>
+                <div>
+                  <div class="font-medium leading-none">Yutuqlar</div>
+                  <div class="text-[11px] text-slate-400 mt-1">Medallar va sertifikatlar</div>
+                </div>
+              </a>
+              <a href="oquvchilar.html#tadbirlar" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-200 hover:bg-navy-700/70 hover:text-gold-400 transition">
+                <i class="fa-solid fa-calendar-days text-gold-500 w-5 text-center"></i>
+                <div>
+                  <div class="font-medium leading-none">Tadbirlar</div>
+                  <div class="text-[11px] text-slate-400 mt-1">To'garak va musobaqalar</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <a href="index.html#yangiliklar" class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-700/40 transition">Yangiliklar</a>
+
+          <!-- Media Dropdown (Active) -->
+          <div class="relative dropdown-group py-2">
+            <button class="px-3.5 py-2 rounded-lg text-sm font-semibold text-white bg-navy-700/60 border border-gold-500/30 flex items-center gap-1.5 focus:outline-none">
+              <span>Media</span>
+              <i class="fa-solid fa-chevron-down text-[10px] text-gold-400"></i>
+            </button>
+            <div class="dropdown-menu absolute left-0 top-full w-52 bg-navy-800 border border-navy-700/90 rounded-xl shadow-2xl p-2 z-50">
+              <a href="galereya.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gold-400 bg-navy-700/50">
+                <i class="fa-solid fa-images text-gold-500 w-5 text-center"></i>
+                <div>
+                  <div class="font-medium leading-none">Galereya</div>
+                  <div class="text-[11px] text-slate-400 mt-1">Foto va video lavhalar</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <a href="hujjatlar.html" class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-700/40 transition">Hujjatlar</a>
+        </nav>
+
+        <div class="hidden md:flex items-center">
+          <a href="aloqa.html" class="bg-gold-600 hover:bg-gold-500 text-navy-900 font-semibold text-sm px-5 py-2.5 rounded-xl transition">
+            <i class="fa-solid fa-file-pen mr-1.5"></i> Ariza qoldirish
+          </a>
+        </div>
+
+        <div class="flex xl:hidden">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-xl bg-navy-800 text-gold-400">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBIL MENYU -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-navy-900/90 backdrop-blur-md">
+    <div class="fixed inset-y-0 right-0 max-w-xs w-full bg-navy-800 p-6 overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 border-b border-navy-700">
+        <span class="font-crest font-bold text-white text-base">1-SONLI MAKTAB</span>
+        <button id="mobile-menu-close" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-2xl"></i></button>
+      </div>
+      <div class="mt-6 flex flex-col space-y-1">
+        <a href="index.html" class="px-3 py-2 text-slate-300">Bosh sahifa</a>
+        <a href="haqida.html" class="px-3 py-2 text-slate-300">Maktab haqida</a>
+        <a href="rahbariyat.html" class="px-3 py-2 text-slate-300">Rahbariyat</a>
+        <a href="oqituvchilar.html" class="px-3 py-2 text-slate-300">O‘qituvchilar</a>
+        <a href="oquvchilar.html" class="px-3 py-2 text-slate-300">Iqtidorli o‘quvchilar</a>
+        <a href="yutuqlar.html" class="px-3 py-2 text-slate-300">Yutuqlar</a>
+        <a href="galereya.html" class="px-3 py-2 text-white bg-navy-700 rounded-lg">Galereya</a>
+        <a href="hujjatlar.html" class="px-3 py-2 text-slate-300">Hujjatlar</a>
+        <a href="aloqa.html" class="px-3 py-2 text-slate-300">Aloqa</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO BANNER -->
+  <section class="bg-academic-pattern text-white py-14 border-b border-navy-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-slate-400 flex items-center gap-2 mb-3">
+        <a href="index.html" class="hover:text-gold-400">Bosh sahifa</a>
+        <span>/</span>
+        <span class="text-slate-300">Media</span>
+        <span>/</span>
+        <span class="text-gold-400 font-semibold">Galereya</span>
+      </nav>
+      <h1 class="font-academic text-3xl sm:text-5xl font-bold text-white leading-tight">
+        Maktab Hayotidan Fotolavhalar
+      </h1>
+      <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl">
+        Dars jarayonlari, ilmiy laboratoriyalar, bayram tadbirlari va sport musobaqalaridan unutilmas lahzalar.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="flex-grow py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-2">
+        <button data-filter="all" class="gallery-filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold border transition bg-[#0D2240] text-white border-[#C59B27]">Barchasi</button>
+        <button data-filter="dars" class="gallery-filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold border transition bg-white text-slate-700 border-slate-200 hover:border-slate-300">O‘quv jarayoni</button>
+        <button data-filter="tadbir" class="gallery-filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold border transition bg-white text-slate-700 border-slate-200 hover:border-slate-300">Tadbirlar</button>
+        <button data-filter="bino" class="gallery-filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold border transition bg-white text-slate-700 border-slate-200 hover:border-slate-300">Maktab binosi</button>
+        <button data-filter="sport" class="gallery-filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold border transition bg-white text-slate-700 border-slate-200 hover:border-slate-300">Sport & Sog‘lom hayot</button>
+      </div>
+
+      <!-- Real Fotolavhalar Grid (10 ta foto, lightbox bilan) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Rasm 1: Merganlik amaliy mashg'uloti (qizlar guruhi) -->
+        <div class="gallery-item academic-card bg-white rounded-2xl overflow-hidden border border-slate-200 group cursor-pointer" data-category="dars">
+          <div class="relative overflow-hidden h-64 bg-slate-900">
+            <img src="assets/images/galereya/63f8e605-c733-458e-9945-d04892e5feeb.png" 
+                 alt="Merganlik amaliy mashg‘uloti" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition"></div>
+            <span class="absolute top-3 left-3 bg-navy-900/90 text-gold-400 text-[11px] font-bold px-3 py-1 rounded-full border border-gold-500/30 backdrop-blur-sm">
+              <i class="fa-solid fa-bullseye mr-1"></i> O‘quv mashg‘uloti
+            </span>
+            <a href="#" class="lightbox-trigger absolute bottom-3 right-3 w-10 h-10 rounded-xl bg-gold-600/90 hover:bg-gold-500 text-navy-950 flex items-center justify-center shadow-lg transition"
+               data-image="assets/images/galereya/63f8e605-c733-458e-9945-d04892e5feeb.png"
+               data-caption="CHQBT fani bo‘yicha harbiy-vatanparvarlik va merganlik amaliy darsi">
+              <i class="fa-solid fa-expand"></i>
+            </a>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-navy-900 text-base group-hover:text-gold-600 transition">
+              Harbiy-vatanparvarlik va merganlik amaliy darsi
+            </h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              CHQBT va sport to‘garaklari doirasida o‘quvchilarimiz uchun merganlik va aniq nishonga olish bo‘yicha amaliy mashg‘ulotlar.
+            </p>
+            <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+              <span><i class="fa-regular fa-clock mr-1 text-gold-500"></i> Amaliy dars</span>
+              <span class="text-gold-600 font-semibold">1-sonli maktab</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rasm 2: Merganlik mashg'uloti (o'g'il bolalar tir yo'lagida) -->
+        <div class="gallery-item academic-card bg-white rounded-2xl overflow-hidden border border-slate-200 group cursor-pointer" data-category="dars">
+          <div class="relative overflow-hidden h-64 bg-slate-900">
+            <img src="assets/images/galereya/92dbaa4f-2046-4430-9ad2-034bc2c91260.jpeg" 
+                 alt="O‘quvchilar tir amaliyotida" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition"></div>
+            <span class="absolute top-3 left-3 bg-navy-900/90 text-gold-400 text-[11px] font-bold px-3 py-1 rounded-full border border-gold-500/30 backdrop-blur-sm">
+              <i class="fa-solid fa-crosshairs mr-1"></i> Tir mashg‘uloti
+            </span>
+            <a href="#" class="lightbox-trigger absolute bottom-3 right-3 w-10 h-10 rounded-xl bg-gold-600/90 hover:bg-gold-500 text-navy-950 flex items-center justify-center shadow-lg transition"
+               data-image="assets/images/galereya/92dbaa4f-2046-4430-9ad2-034bc2c91260.jpeg"
+               data-caption="Maktab harbiy tayyorgarlik burchagi: o‘quvchilar qurol bilan ishlash mashg‘ulotida">
+              <i class="fa-solid fa-expand"></i>
+            </a>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-navy-900 text-base group-hover:text-gold-600 transition">
+              Harbiy nishonga olish va miltiq otish mashg‘uloti
+            </h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              O‘quvchilar maxsus jihozlangan tir yo‘lagida ustoz rahbarligida nishonga to‘g‘ri mo‘ljalga olish texnikasini o‘rganmoqda.
+            </p>
+            <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+              <span><i class="fa-solid fa-shield-halved mr-1 text-gold-500"></i> CHQBT amaliyoti</span>
+              <span class="text-gold-600 font-semibold">Tir maydoni</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rasm 3: CHQBT sinf xonasidagi qurol tuzilishi darsi -->
+        <div class="gallery-item academic-card bg-white rounded-2xl overflow-hidden border border-slate-200 group cursor-pointer" data-category="dars">
+          <div class="relative overflow-hidden h-64 bg-slate-900">
+            <img src="assets/images/galereya/50b3143d-2ce8-4f65-bb33-b3b51fde786e.jpeg" 
+                 alt="Harbiy bilim va qurol tuzilishi darsi" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition"></div>
+            <span class="absolute top-3 left-3 bg-navy-900/90 text-gold-400 text-[11px] font-bold px-3 py-1 rounded-full border border-gold-500/30 backdrop-blur-sm">
+              <i class="fa-solid fa-person-chalkboard mr-1"></i> Nazariy dars
+            </span>
+            <a href="#" class="lightbox-trigger absolute bottom-3 right-3 w-10 h-10 rounded-xl bg-gold-600/90 hover:bg-gold-500 text-navy-950 flex items-center justify-center shadow-lg transition"
+               data-image="assets/images/galereya/50b3143d-2ce8-4f65-bb33-b3b51fde786e.jpeg"
+               data-caption="CHQBT sinfida qurolning taktik-texnik xususiyatlari va xavfsizlik qoidalari o‘rgatilmoqda">
+              <i class="fa-solid fa-expand"></i>
+            </a>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-navy-900 text-base group-hover:text-gold-600 transition">
+              Qurolning taktik xususiyatlari va xavfsizlik darsi
+            </h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Tajribali harbiy rahbar o‘quvchilarga avtomat va qurollar bilan muomala qilish qoidalari bo‘yicha nazariy saboq bermoqda.
+            </p>
+            <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+              <span><i class="fa-solid fa-chalkboard mr-1 text-gold-500"></i> Nazariya</span>
+              <span class="text-gold-600 font-semibold">CHQBT xonasi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rasm 4: Harbiy o'qituvchi bilan o'quvchilar suhbati -->
+        <div class="gallery-item academic-card bg-white rounded-2xl overflow-hidden border border-slate-200 group cursor-pointer" data-category="dars">
+          <div class="relative overflow-hidden h-64 bg-slate-900">
+            <img src="assets/images/galereya/dedb9852-844c-482b-9c78-fe3ad0bc0ac5.jpeg" 
+                 alt="Harbiy o‘qituvchi bilan dars jarayoni" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition"></div>
+            <span class="absolute top-3 left-3 bg-navy-900/90 text-gold-400 text-[11px] font-bold px-3 py-1 rounded-full border border-gold-500/30 backdrop-blur-sm">
+              <i class="fa-solid fa-medal mr-1"></i> Vatanparvarlik
+            </span>
+            <a href="#" class="lightbox-trigger absolute bottom-3 right-3 w-10 h-10 rounded-xl bg-gold-600/90 hover:bg-gold-500 text-navy-950 flex items-center justify-center shadow-lg transition"
+               data-image="assets/images/galereya/dedb9852-844c-482b-9c78-fe3ad0bc0ac5.jpeg"
+               data-caption="Harbiy vatanparvarlik va fuqaro mudofaasi mavzusidagi jonli dars jarayoni">
+              <i class="fa-solid fa-expand"></i>
+            </a>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-navy-900 text-base group-hover:text-gold-600 transition">
+              Vatanparvarlik va fuqaro mudofaasi darsi
+            </h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              O‘quvchilar harbiy xizmat burchi, intizom va favqulodda vaziyatlarda to‘g‘ri harakatlanish ko‘nikmalarini egallamoqda.
+            </p>
+            <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+              <span><i class="fa-solid fa-graduation-cap mr-1 text-gold-500"></i> Yuqori sinflar</span>
+              <span class="text-gold-600 font-semibold">1-maktab</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rasm 5: 1-sinf Alifbe bayrami - Umumiy jamoaviy foto -->
+        <div class="gallery-item academic-card bg-white rounded-2xl overflow-hidden border border-slate-200 group cursor-pointer" data-category="tadbir">
+          <div class="relative overflow-hidden h-64 bg-slate-900">
+            <img src="assets/images/galereya/899b6860-4dc8-4524-a41f-672abd80722c.png" 
+                 alt="1-sinf «Alifbe bayrami» tantanali konserti" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition"></div>
+            <span class="absolute top-3 left-3 bg-navy-900/90 text-gold-400 text-[11px] font-bold px-3 py-1 rounded-full border border-gold-500/30 backdrop-blur-sm">
+              <i class="fa-solid fa-graduation-cap mr-1"></i> 1-sinf Alifbe bayrami
+            </span>
+            <a href="#" class="lightbox-trigger absolute bottom-3 right-3 w-10 h-10 rounded-xl bg-gold-600/90 hover:bg-gold-500 text-navy-950 flex items-center justify-center shadow-lg transition"
+               data-image="assets/images/galereya/899b6860-4dc8-4524-a41f-672abd80722c.png"
+               data-caption="1-sinf o‘quvchilarining «Alifbe bayrami» tantanali konsert dasturi">
+              <i class="fa-solid fa-expand"></i>
+            </a>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-navy-900 text-base group-hover:text-gold-600 transition">
+              1-sinf «Alifbe bayrami» tantanali tadbiri
+            </h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Oq kostyum-shim va oq libosdagi 1-sinf o‘quvchilari o‘zlarining ilk savod tantanasi — «Alifbe bayrami»ni katta shodiyona bilan nishonlamoqda.
+            </p>
+            <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+              <span><i class="fa-solid fa-book-open mr-1 text-gold-500"></i> 1-sinf bayrami</span>
+              <span class="text-gold-600 font-semibold">Tadbir zali</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rasm 6: 1-sinf Alifbe bayrami - Qizlar raqs chiqishi -->
+        <div class="gallery-item academic-card bg-white rounded-2xl overflow-hidden border border-slate-200 group cursor-pointer" data-category="tadbir">
+          <div class="relative overflow-hidden h-64 bg-slate-900">
+            <img src="assets/images/galereya/9cd210d6-4ce0-438c-b6b6-a75499096cee.jpeg" 
+                 alt="1-sinf «Alifbe bayrami» qizlarining bayram raqsi" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition"></div>
+            <span class="absolute top-3 left-3 bg-navy-900/90 text-gold-400 text-[11px] font-bold px-3 py-1 rounded-full border border-gold-500/30 backdrop-blur-sm">
+              <i class="fa-solid fa-music mr-1"></i> 1-sinf Alifbe bayrami
+            </span>
+            <a href="#" class="lightbox-trigger absolute bottom-3 right-3 w-10 h-10 rounded-xl bg-gold-600/90 hover:bg-gold-500 text-navy-950 flex items-center justify-center shadow-lg transition"
+               data-image="assets/images/galereya/9cd210d6-4ce0-438c-b6b6-a75499096cee.jpeg"
+               data-caption="«Alifbe bayrami»da oq libosdagi 1-sinf qizlarining nafis raqs kompozitsiyasi">
+              <i class="fa-solid fa-expand"></i>
+            </a>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-navy-900 text-base group-hover:text-gold-600 transition">
+              1-sinf qizlarining «Alifbe bayrami» raqsi
+            </h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Oq ko‘ylak va yubkalarda 1-sinf o‘quvchi qizlari «Alifbe bayrami»da o‘zlarining ilk maktab raqs va sahna ko‘rinishlarini ijro etishdi.
+            </p>
+            <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+              <span><i class="fa-solid fa-star mr-1 text-gold-500"></i> Alifbe bayrami</span>
+              <span class="text-gold-600 font-semibold">Sahna ko‘rinishi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rasm 7: 1-sinf Alifbe bayrami - Jamoaviy qo'shiq va xor -->
+        <div class="gallery-item academic-card bg-white rounded-2xl overflow-hidden border border-slate-200 group cursor-pointer" data-category="tadbir">
+          <div class="relative overflow-hidden h-64 bg-slate-900">
+            <img src="assets/images/galereya/b549087e-e703-45f2-8c48-15f9321583a8.jpeg" 
+                 alt="1-sinf «Alifbe bayrami» xori va she'riy chiqishlar" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition"></div>
+            <span class="absolute top-3 left-3 bg-navy-900/90 text-gold-400 text-[11px] font-bold px-3 py-1 rounded-full border border-gold-500/30 backdrop-blur-sm">
+              <i class="fa-solid fa-microphone mr-1"></i> 1-sinf Alifbe bayrami
+            </span>
+            <a href="#" class="lightbox-trigger absolute bottom-3 right-3 w-10 h-10 rounded-xl bg-gold-600/90 hover:bg-gold-500 text-navy-950 flex items-center justify-center shadow-lg transition"
+               data-image="assets/images/galereya/b549087e-e703-45f2-8c48-15f9321583a8.jpeg"
+               data-caption="1-sinf o‘quvchilarining «Alifbe bayrami»dagi jamoaviy xor va vatanparvarlik qo‘shiqlari">
+              <i class="fa-solid fa-expand"></i>
+            </a>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-navy-900 text-base group-hover:text-gold-600 transition">
+              1-sinf «Alifbe bayrami» jamoaviy xor chiqishi
+            </h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Oq liboslardagi 1-sinf o‘quvchilari «Alifbe bayrami»da kitob, muallim va Vatanni madh etuvchi eng samimiy qo‘shiqlarni kuylashdi.
+            </p>
+            <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+              <span><i class="fa-solid fa-heart mr-1 text-gold-500"></i> 1-sinf xori</span>
+              <span class="text-gold-600 font-semibold">Tantanalar zali</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rasm 8: 1-sinf Alifbe bayrami - O'g'il bolalar jo'shqin chiqishi -->
+        <div class="gallery-item academic-card bg-white rounded-2xl overflow-hidden border border-slate-200 group cursor-pointer" data-category="tadbir">
+          <div class="relative overflow-hidden h-64 bg-slate-900">
+            <img src="assets/images/galereya/f943522a-9327-4e3b-b158-1b886f48a287.jpeg" 
+                 alt="1-sinf «Alifbe bayrami» o‘g‘il bolalar chiqishi" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition"></div>
+            <span class="absolute top-3 left-3 bg-navy-900/90 text-gold-400 text-[11px] font-bold px-3 py-1 rounded-full border border-gold-500/30 backdrop-blur-sm">
+              <i class="fa-solid fa-users mr-1"></i> 1-sinf Alifbe bayrami
+            </span>
+            <a href="#" class="lightbox-trigger absolute bottom-3 right-3 w-10 h-10 rounded-xl bg-gold-600/90 hover:bg-gold-500 text-navy-950 flex items-center justify-center shadow-lg transition"
+               data-image="assets/images/galereya/f943522a-9327-4e3b-b158-1b886f48a287.jpeg"
+               data-caption="1-sinf «Alifbe bayrami»da oq kostyum-shimlardagi o‘g‘il bolalarning jo‘shqin sahna chiqishi">
+              <i class="fa-solid fa-expand"></i>
+            </a>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-navy-900 text-base group-hover:text-gold-600 transition">
+              1-sinf o‘g‘il bolalarining «Alifbe bayrami» chiqishi
+            </h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Oq kostyum-shimdagi 1-sinf o‘g‘il bolalari «Alifbe bayrami» dasturida jo‘shqin raqs va badiiy chiqishlarni mahorat bilan namoyish etishdi.
+            </p>
+            <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+              <span><i class="fa-solid fa-flag mr-1 text-gold-500"></i> 1-sinf Alifbe bayrami</span>
+              <span class="text-gold-600 font-semibold">Faollar zali</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rasm 9: «Abadiyat timsoli» milliy adabiy-ma'rifiy kecha -->
+        <div class="gallery-item academic-card bg-white rounded-2xl overflow-hidden border border-slate-200 group cursor-pointer" data-category="tadbir">
+          <div class="relative overflow-hidden h-64 bg-slate-900">
+            <img src="assets/images/galereya/a41c8843-f44c-4415-abb3-fec49b07361b.jpeg" 
+                 alt="Abadiyat timsoli adabiy-badiiy kecha" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition"></div>
+            <span class="absolute top-3 left-3 bg-navy-900/90 text-gold-400 text-[11px] font-bold px-3 py-1 rounded-full border border-gold-500/30 backdrop-blur-sm">
+              <i class="fa-solid fa-book-open mr-1"></i> Adabiy kecha
+            </span>
+            <a href="#" class="lightbox-trigger absolute bottom-3 right-3 w-10 h-10 rounded-xl bg-gold-600/90 hover:bg-gold-500 text-navy-950 flex items-center justify-center shadow-lg transition"
+               data-image="assets/images/galereya/a41c8843-f44c-4415-abb3-fec49b07361b.jpeg"
+               data-caption="«Abadiyat timsoli» nomli ma'rifiy va adabiy tadbirdan lavha">
+              <i class="fa-solid fa-expand"></i>
+            </a>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-navy-900 text-base group-hover:text-gold-600 transition">
+              «Abadiyat timsoli» ma'rifiy adabiy kecha
+            </h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              O‘zbek adabiyoti, milliy qadriyatlar va allomalarimiz xotirasiga bag‘ishlangan sahnalashtirilgan kompozitsiya.
+            </p>
+            <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+              <span><i class="fa-solid fa-feather-pointed mr-1 text-gold-500"></i> Ma'naviyat</span>
+              <span class="text-gold-600 font-semibold">Adabiyot kechasi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rasm 10: Ota-onalar va jamoatchilik anjumani -->
+        <div class="gallery-item academic-card bg-white rounded-2xl overflow-hidden border border-slate-200 group cursor-pointer" data-category="tadbir">
+          <div class="relative overflow-hidden h-64 bg-slate-900">
+            <img src="assets/images/galereya/9a27f4c7-adf1-4a91-947b-b9c844cb3ebb.png" 
+                 alt="Maktab ma'muriyati va ota-onalar uchrashuvi" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition"></div>
+            <span class="absolute top-3 left-3 bg-navy-900/90 text-gold-400 text-[11px] font-bold px-3 py-1 rounded-full border border-gold-500/30 backdrop-blur-sm">
+              <i class="fa-solid fa-users-between-lines mr-1"></i> Ota-onalar forumi
+            </span>
+            <a href="#" class="lightbox-trigger absolute bottom-3 right-3 w-10 h-10 rounded-xl bg-gold-600/90 hover:bg-gold-500 text-navy-950 flex items-center justify-center shadow-lg transition"
+               data-image="assets/images/galereya/9a27f4c7-adf1-4a91-947b-b9c844cb3ebb.png"
+               data-caption="Maktab ma'muriyati, o‘qituvchilar va ota-onalar ishtirokidagi hisobot anjumani">
+              <i class="fa-solid fa-expand"></i>
+            </a>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-navy-900 text-base group-hover:text-gold-600 transition">
+              Maktab ma'muriyati va ota-onalar anjumani
+            </h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Ta'lim sifati, o‘quvchilar intizomi va kelgusi rejalar muhokamasiga bag‘ishlangan rasmiy hisobot yig‘ilishi.
+            </p>
+            <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+              <span><i class="fa-solid fa-handshake mr-1 text-gold-500"></i> Hamkorlik</span>
+              <span class="text-gold-600 font-semibold">Majlislar zali</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Qo'shimcha Mavzuiy Albomlar -->
+      <div class="pt-8">
+        <h2 class="font-academic text-2xl font-bold text-navy-900 mb-6 flex items-center gap-2">
+          <i class="fa-solid fa-folder-open text-gold-600"></i>
+          <span>Mavzuiy Fotoalbomlar</span>
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 text-center academic-card">
+            <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl mx-auto mb-3">
+              <i class="fa-solid fa-flask-vial"></i>
+            </div>
+            <span class="text-[10px] font-bold text-gold-600 uppercase">O‘quv jarayoni</span>
+            <h3 class="font-bold text-navy-900 text-base mt-1">Fan laboratoriyalari albomi</h3>
+            <p class="text-xs text-slate-500 mt-1">Biologiya, kimyo va fizika amaliy darslaridan lavhalar.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 text-center academic-card">
+            <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl mx-auto mb-3">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <span class="text-[10px] font-bold text-gold-600 uppercase">Tadbirlar</span>
+            <h3 class="font-bold text-navy-900 text-base mt-1">Bitiruv va taqdirlash marosimlari</h3>
+            <p class="text-xs text-slate-500 mt-1">Olimpiada g‘oliblari va faxriy bitiruvchilarni sharaflash.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 text-center academic-card">
+            <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl mx-auto mb-3">
+              <i class="fa-solid fa-book-open-reader"></i>
+            </div>
+            <span class="text-[10px] font-bold text-gold-600 uppercase">Maktab binosi</span>
+            <h3 class="font-bold text-navy-900 text-base mt-1">Axborot-resurs markazi</h3>
+            <p class="text-xs text-slate-500 mt-1">Kutubxona fondi va zamonaviy o‘quv zallari.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <button id="lightbox-close" class="absolute top-6 right-6 text-white hover:text-gold-400 text-3xl transition">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="max-w-4xl w-full text-center">
+      <img id="lightbox-img" src="" alt="Kattalashtirilgan rasm" class="max-h-[80vh] mx-auto rounded-xl border border-gold-500/30 shadow-2xl">
+      <p id="lightbox-caption" class="text-white text-sm mt-3 font-medium"></p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy-900 text-slate-400 text-sm border-t border-navy-700 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:flex sm:justify-between">
+      <div>© 2026 Bekobod shahar 1-umumiy o‘rta ta'lim maktabi. Barcha huquqlar himoyalangan.</div>
+      <div class="mt-2 sm:mt-0 space-x-4">
+        <a href="index.html" class="hover:text-gold-400">Bosh sahifa</a>
+        <a href="aloqa.html" class="hover:text-gold-400">Aloqa</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBIL PASTKI TAB BAR (Modern Academic - Faqat mobil va planshetda ko'rinadi) -->
+  <nav id="mobile-tab-bar" class="mobile-tab-bar xl:hidden">
+    <div class="tab-spotlight"></div>
+    <a href="index.html" class="mobile-tab-item" title="Bosh sahifa">
+      <i class="fa-solid fa-house"></i>
+      <span>Asosiy</span>
+    </a>
+    <a href="haqida.html" class="mobile-tab-item" title="Maktab haqida">
+      <i class="fa-solid fa-landmark"></i>
+      <span>Maktab</span>
+    </a>
+    <a href="galereya.html" class="mobile-tab-item active" title="Galereya & Media">
+      <i class="fa-solid fa-images"></i>
+      <span>Galereya</span>
+    </a>
+    <a href="yutuqlar.html" class="mobile-tab-item" title="Yutuqlar & Reyting">
+      <i class="fa-solid fa-trophy"></i>
+      <span>Yutuqlar</span>
+    </a>
+    <button id="mobile-tab-menu-btn" type="button" class="mobile-tab-item focus:outline-none" aria-label="To‘liq Menyu" title="Menyu">
+      <i class="fa-solid fa-bars"></i>
+      <span>Menyu</span>
+    </button>
+  </nav>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
