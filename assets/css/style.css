@@ -19,9 +19,9 @@
   --canvas-bg: #F8FAFC;
 }
 
-/* Smooth Scrolling & Hardware Acceleration */
+/* Hardware Acceleration & Layout Stability */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   scroll-padding-top: 90px; /* Header balandligiga mos */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
