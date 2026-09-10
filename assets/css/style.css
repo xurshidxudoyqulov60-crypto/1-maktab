@@ -25,6 +25,8 @@ html {
   scroll-padding-top: 90px; /* Header balandligiga mos */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 body {
@@ -33,6 +35,13 @@ body {
   background-color: #F8FAFC;
   overflow-x: hidden;
   padding-bottom: 0; /* Desktopda toza 0 padding */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: none;
+}
+
+/* Touch responsiveness - 300ms click delay olib tashlash */
+a, button, input, select, textarea, .mobile-tab-item, .fab-main-btn {
+  touch-action: manipulation;
 }
 
 @media (max-width: 1279px) {
@@ -108,16 +117,25 @@ body {
 
 /* Card Hover Elevation - Luxury Polish */
 .academic-card {
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
   border: 1px solid rgba(226, 232, 240, 0.9);
   background: #FFFFFF;
   box-shadow: 0 4px 20px -2px rgba(11, 25, 44, 0.04);
   position: relative;
+  will-change: transform;
 }
-.academic-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 22px 38px -10px rgba(11, 25, 44, 0.11), 0 4px 12px rgba(229, 169, 60, 0.08);
-  border-color: rgba(229, 169, 60, 0.5);
+@media (hover: hover) and (pointer: fine) {
+  .academic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 38px -10px rgba(11, 25, 44, 0.11), 0 4px 12px rgba(229, 169, 60, 0.08);
+    border-color: rgba(229, 169, 60, 0.5);
+  }
+}
+@media (hover: none) {
+  .academic-card:active {
+    transform: scale(0.985);
+    transition: transform 0.1s ease;
+  }
 }
 
 /* Gold Gradient Text */
@@ -673,3 +691,59 @@ body {
     display: none !important;
   }
 }
+
+/* ==========================================================================
+   MOBILE ULTRA-SMOOTH (60/120 FPS) HARDWARE ACCELERATION & SCROLL BOOST
+   Har qanday smartfonda (byudjet va flagman) qotmasdan silliq ishlashini ta'minlash
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* 1. Katta bo'limlarni faqat ekranga yaqinlashganda chizish (CPU/GPU tejash) */
+  main > section:not(:first-child) {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 550px;
+  }
+
+  /* 2. Mobil qurilmalarda og'ir backdrop blur o'rniga to'q xavfsiz rang berish */
+  .mobile-tab-bar {
+    background: #0B192C !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-color: rgba(246, 208, 96, 0.45) !important;
+    box-shadow: 0 10px 30px rgba(5, 11, 20, 0.85) !important;
+    transform: translateX(-50%) translateZ(0) !important;
+    will-change: transform;
+  }
+
+  .header-glass {
+    background: #0B192C !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    transform: translateZ(0);
+  }
+
+  .grid-menu-modal,
+  .rudder-overlay,
+  .bottom-sheet-backdrop {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(7, 15, 27, 0.94) !important;
+  }
+
+  .menu-style-switcher {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: #0B192C !important;
+  }
+
+  /* 3. Mobilda tab bar ichidagi og'ir xiralashtiruvchi nurni yengillatish */
+  .tab-spotlight::after {
+    display: none !important;
+  }
+
+  /* 4. Rasmlarning apparat tezlashuvi */
+  img {
+    content-visibility: auto;
+    transform: translateZ(0);
+  }
+}
+

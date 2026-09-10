@@ -71,7 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateSpotlight(index) {
     if (tabSpotlight) {
-      tabSpotlight.style.transform = `translateX(${index * 100}%)`;
+      requestAnimationFrame(() => {
+        tabSpotlight.style.transform = `translateX(${index * 100}%) translateZ(0)`;
+      });
     }
   }
 
