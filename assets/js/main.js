@@ -512,4 +512,63 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  /* --------------------------------------------------------------------------
+     JONLI MAKTAB HOLATI VA SANA (HUMAN-TOUCH LIVE STATUS)
+     -------------------------------------------------------------------------- */
+  const liveDateEl = document.getElementById('live-date-display');
+  const liveShiftEl = document.getElementById('live-shift-display');
+
+  if (liveDateEl || liveShiftEl) {
+    const now = new Date();
+    const days = ['Yakshanba', 'Dushanba', 'Seshanba', 'Chorshanba', 'Payshanba', 'Juma', 'Shanba'];
+    const months = ['yanvar', 'fevral', 'mart', 'aprel', 'may', 'iyun', 'iyul', 'avgust', 'sentyabr', 'oktyabr', 'noyabr', 'dekabr'];
+    
+    const dayName = days[now.getDay()];
+    const dateNum = now.getDate();
+    const monthName = months[now.getMonth()];
+    const year = now.getFullYear();
+
+    if (liveDateEl) {
+      liveDateEl.innerText = `${dayName}, ${dateNum}-${monthName}, ${year}`;
+    }
+
+    if (liveShiftEl) {
+      const hour = now.getHours();
+      const isSunday = now.getDay() === 0;
+
+      if (isSunday) {
+        liveShiftEl.innerHTML = `<span class="pulse-dot bg-amber-400"></span> Dam olish kuni`;
+      } else if (hour >= 8 && hour < 13) {
+        liveShiftEl.innerHTML = `<span class="pulse-dot"></span> 1-smena: Dars jarayoni faol`;
+      } else if (hour >= 13 && hour < 18) {
+        liveShiftEl.innerHTML = `<span class="pulse-dot"></span> 2-smena: Dars jarayoni faol`;
+      } else if (hour >= 18 && hour < 20) {
+        liveShiftEl.innerHTML = `<span class="pulse-dot bg-blue-400"></span> To‘garaklar va sport mashg‘ulotlari`;
+      } else {
+        liveShiftEl.innerHTML = `<span class="pulse-dot bg-slate-400"></span> Maktab faoliyati: 08:00 da boshlanadi`;
+      }
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     SUZUVCHI «TEPAGA QAYTISH» (SCROLL TO TOP) TUGMASI
+     -------------------------------------------------------------------------- */
+  const scrollToTopBtn = document.getElementById('scroll-to-top');
+  if (scrollToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 320) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 });

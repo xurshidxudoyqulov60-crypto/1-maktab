@@ -45,15 +45,23 @@
 </head>
 <body class="bg-[#F8FAFC] text-slate-800 antialiased flex flex-col min-h-screen">
 
-  <!-- TOP BAR (Rasmiy axborot paneli) -->
+  <!-- TOP BAR (Rasmiy axborot va jonli holat paneli) -->
   <div class="bg-navy-900 text-slate-300 text-xs border-b border-navy-700/60 py-2 px-4">
-    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-      <div class="flex items-center space-x-6">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2.5">
+      <div class="flex items-center flex-wrap gap-x-6 gap-y-1">
         <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-gold-500"></i> Bekobod shahar 1-umumiy o‘rta ta'lim maktabi</span>
         <span class="flex items-center gap-1.5"><i class="fa-solid fa-phone text-gold-500"></i> Tel: 90-330-43-09</span>
-        <span class="hidden lg:flex items-center gap-1.5"><i class="fa-regular fa-clock text-gold-500"></i> Dsh - Shb: 08:00 - 18:00</span>
+        <!-- Jonli maktab holati -->
+        <span id="live-shift-display" class="inline-flex items-center gap-1.5 font-medium text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2.5 py-0.5 rounded-full text-[11px]">
+          <span class="pulse-dot"></span> 1-smena: Dars jarayoni faol
+        </span>
       </div>
-      <div class="flex items-center space-x-4">
+      <div class="flex items-center space-x-3 sm:space-x-4">
+        <!-- Jonli sana ko'rsatkichi -->
+        <span class="hidden md:inline-flex items-center gap-1.5 text-slate-400 text-[11px]">
+          <i class="fa-regular fa-calendar-check text-gold-400"></i>
+          <span id="live-date-display">Bugun: 10-sentyabr, 2026</span>
+        </span>
         <a href="https://emaktab.uz/v2/soc/networks" target="_blank" rel="noopener noreferrer" 
            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#163258] hover:bg-gold-600 hover:text-navy-950 text-gold-300 hover:border-gold-400 font-bold border border-gold-500/40 transition shadow-sm text-xs"
            title="eMaktab.uz ta'lim tarmog'iga o'tish">
@@ -61,8 +69,8 @@
           <span>eMaktab.uz</span>
           <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-80"></i>
         </a>
-        <div class="flex items-center space-x-3 text-sm">
-          <a href="#" class="hover:text-gold-400 transition" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        <div class="flex items-center space-x-2.5 text-sm">
+          <a href="https://t.me/maktab_1bot" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition" title="Telegram Bot"><i class="fa-brands fa-telegram"></i></a>
           <a href="#" class="hover:text-gold-400 transition" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
           <a href="#" class="hover:text-gold-400 transition" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
           <a href="#" class="hover:text-gold-400 transition" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -394,6 +402,77 @@
           </div>
 
         </div>
+      </div>
+    </section>
+
+    <!-- TEZKOR XIZMATLAR VA INSONIY QULAYLIKLAR (QUICK ACTIONS GRID) -->
+    <section class="relative -mt-10 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- Action 1: eMaktab.uz -->
+        <a href="https://emaktab.uz/v2/soc/networks" target="_blank" rel="noopener noreferrer" 
+           class="quick-action-card p-5 rounded-2xl shadow-lg border border-slate-200/90 group flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-900 to-navy-800 border border-gold-500/40 text-gold-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 group-hover:border-gold-400 transition shadow">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 uppercase tracking-wider mb-0.5">
+              <span>Raqamli Tizim</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+            </div>
+            <h4 class="font-bold text-navy-900 text-sm group-hover:text-gold-600 transition">eMaktab.uz</h4>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Elektron kundalik, baholar jurnali va uy vazifalari.</p>
+          </div>
+        </a>
+
+        <!-- Action 2: Dars Jadvallari & Qo'ng'iroqlar -->
+        <a href="oquvchilar.html#tadbirlar" 
+           class="quick-action-card p-5 rounded-2xl shadow-lg border border-slate-200/90 group flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-900 to-navy-800 border border-gold-500/40 text-gold-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 group-hover:border-gold-400 transition shadow">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5 text-[11px] font-bold text-gold-600 uppercase tracking-wider mb-0.5">
+              <span>Dars Vaqti</span>
+              <i class="fa-solid fa-arrow-right text-[9px]"></i>
+            </div>
+            <h4 class="font-bold text-navy-900 text-sm group-hover:text-gold-600 transition">Qo‘ng‘iroqlar Jadvali</h4>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">1 va 2-smena dars va tanaffus vaqtlari.</p>
+          </div>
+        </a>
+
+        <!-- Action 3: To'garaklar & Olimpiada -->
+        <a href="yutuqlar.html" 
+           class="quick-action-card p-5 rounded-2xl shadow-lg border border-slate-200/90 group flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-900 to-navy-800 border border-gold-500/40 text-gold-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 group-hover:border-gold-400 transition shadow">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5 text-[11px] font-bold text-blue-600 uppercase tracking-wider mb-0.5">
+              <span>Iqtidor & Sport</span>
+              <i class="fa-solid fa-arrow-right text-[9px]"></i>
+            </div>
+            <h4 class="font-bold text-navy-900 text-sm group-hover:text-gold-600 transition">To‘garaklar & Yutuqlar</h4>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Fan to‘garaklari, robototexnika va sport klublari.</p>
+          </div>
+        </a>
+
+        <!-- Action 4: Telegramda Murojaat -->
+        <a href="#aloqa-form" 
+           class="quick-action-card p-5 rounded-2xl shadow-lg border border-slate-200/90 group flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-900 to-navy-800 border border-gold-500/40 text-gold-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 group-hover:border-gold-400 transition shadow">
+            <i class="fa-brands fa-telegram"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5 text-[11px] font-bold text-sky-600 uppercase tracking-wider mb-0.5">
+              <span>Tezkor Aloqa</span>
+              <i class="fa-solid fa-paper-plane text-[9px]"></i>
+            </div>
+            <h4 class="font-bold text-navy-900 text-sm group-hover:text-gold-600 transition">Onlayn Murojaat</h4>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Direktor va ma'muriyatga to‘g‘ridan-to‘g‘ri xabar.</p>
+          </div>
+        </a>
+
       </div>
     </section>
 
@@ -1069,7 +1148,7 @@
     </section>
 
     <!-- SECTION 7: ALOQA VA XARITA -->
-    <section class="py-20 bg-white">
+    <section id="aloqa-form" class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -1298,6 +1377,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- SUZUVCHI «TEPAGA QAYTISH» TUGMASI (SCROLL TO TOP) -->
+  <button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Tepaga qaytish" title="Tepaga qaytish">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
 
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>

@@ -747,3 +747,100 @@ a, button, input, select, textarea, .mobile-tab-item, .fab-main-btn {
   }
 }
 
+/* ==========================================================================
+   UI / UX POLISH - INSONIY, ILIQ VA ZAMONAVIY ERGONOMIYA
+   ========================================================================== */
+
+/* 1. Jonli maktab holati (Live Status Pulse) */
+.pulse-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10B981;
+  position: relative;
+  vertical-align: middle;
+}
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background-color: rgba(16, 185, 129, 0.45);
+  animation: pulseAnimation 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pulseAnimation {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+/* 2. Suzuvchi «Tepaga Qaytish» (Scroll-to-Top) tugmasi */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0B192C 0%, #112A46 100%);
+  color: #F6D060;
+  border: 1.5px solid rgba(246, 208, 96, 0.4);
+  box-shadow: 0 10px 25px -4px rgba(5, 11, 20, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 45;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-to-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-to-top-btn:hover {
+  background: #E5A93C;
+  color: #050B14;
+  border-color: #FFFFFF;
+  box-shadow: 0 12px 30px rgba(229, 169, 60, 0.45);
+  transform: translateY(-3px);
+}
+@media (max-width: 1279px) {
+  .scroll-to-top-btn {
+    bottom: 96px; /* Mobil tab bar ustida joylashishi uchun */
+    right: 18px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* 3. Tezkor Xizmatlar (Quick Actions Grid) nafosati */
+.quick-action-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  position: relative;
+  overflow: hidden;
+}
+@media (hover: hover) and (pointer: fine) {
+  .quick-action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px -8px rgba(11, 25, 44, 0.09), 0 4px 12px rgba(229, 169, 60, 0.08);
+    border-color: rgba(229, 169, 60, 0.55);
+  }
+}
+.quick-action-card:active {
+  transform: scale(0.98);
+}
+
+
