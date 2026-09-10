@@ -535,18 +535,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (liveShiftEl) {
       const hour = now.getHours();
+      const minute = now.getMinutes();
+      const totalMinutes = hour * 60 + minute;
       const isSunday = now.getDay() === 0;
 
+      // Maktab jadvali: Darslar 08:00 - 13:10 (790 daqiqa), o'qituvchilar 15:00 gacha (900 daqiqa)
       if (isSunday) {
         liveShiftEl.innerHTML = `<span class="pulse-dot bg-amber-400"></span> Dam olish kuni`;
-      } else if (hour >= 8 && hour < 13) {
-        liveShiftEl.innerHTML = `<span class="pulse-dot"></span> 1-smena: Dars jarayoni faol`;
-      } else if (hour >= 13 && hour < 18) {
-        liveShiftEl.innerHTML = `<span class="pulse-dot"></span> 2-smena: Dars jarayoni faol`;
-      } else if (hour >= 18 && hour < 20) {
-        liveShiftEl.innerHTML = `<span class="pulse-dot bg-blue-400"></span> To‘garaklar va sport mashg‘ulotlari`;
+      } else if (totalMinutes >= 480 && totalMinutes < 790) {
+        liveShiftEl.innerHTML = `<span class="pulse-dot"></span> Dars jarayoni (13:10 gacha)`;
+      } else if (totalMinutes >= 790 && totalMinutes < 900) {
+        liveShiftEl.innerHTML = `<span class="pulse-dot bg-amber-400"></span> O‘qituvchilar uslubiy soati (15:00 gacha)`;
+      } else if (totalMinutes >= 900) {
+        liveShiftEl.innerHTML = `<span class="pulse-dot bg-slate-400"></span> Darslar yakunlangan (Ertaga 08:00)`;
       } else {
-        liveShiftEl.innerHTML = `<span class="pulse-dot bg-slate-400"></span> Maktab faoliyati: 08:00 da boshlanadi`;
+        liveShiftEl.innerHTML = `<span class="pulse-dot bg-slate-400"></span> Darslar 08:00 da boshlanadi`;
       }
     }
   }
