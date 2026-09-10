@@ -3,6 +3,15 @@
  * Modern Academic Interactive Controller & 8 Mobile Menu Styles
  */
 
+// Sahifa reload bo'lganda avtomatik pastga tushib ketmasligi va doim eng tepadan ochilishi uchun
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+if (window.location.hash) {
+  history.replaceState(null, '', window.location.pathname + window.location.search);
+}
+window.scrollTo(0, 0);
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* --------------------------------------------------------------------------
@@ -506,9 +515,6 @@ document.addEventListener('DOMContentLoaded', () => {
           behavior: 'smooth',
           block: 'start'
         });
-        if (history.pushState) {
-          history.pushState(null, null, hash);
-        }
       }
     });
   });
