@@ -204,27 +204,266 @@
   </section>
 
   <!-- CONTENT -->
-  <main class="flex-grow py-20 flex items-center justify-center">
-    <div class="max-w-2xl mx-auto px-4 text-center">
-      <div class="w-20 h-20 mx-auto rounded-3xl bg-navy-800 text-gold-400 flex items-center justify-center text-3xl shadow-lg border border-gold-500/30 mb-6">
-        <i class="fa-solid fa-chalkboard-user"></i>
+  <main class="flex-grow py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+
+      <!-- Fanlar bo'yicha qisqacha ko'rsatkichlar -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center text-2xl shrink-0">
+            <i class="fa-solid fa-calculator"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Aniq fanlar</div>
+            <h4 class="font-academic text-xl font-bold text-navy-900">Matematika</h4>
+            <p class="text-xs text-indigo-600 font-semibold mt-0.5">3 nafar ustoz</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center text-2xl shrink-0">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Filologiya</div>
+            <h4 class="font-academic text-xl font-bold text-navy-900">Ona tili va adabiyot</h4>
+            <p class="text-xs text-emerald-600 font-semibold mt-0.5">2 nafar ustoz</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200 text-amber-600 flex items-center justify-center text-2xl shrink-0">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Amaliy fanlar</div>
+            <h4 class="font-academic text-xl font-bold text-navy-900">Texnologiya</h4>
+            <p class="text-xs text-amber-600 font-semibold mt-0.5">2 nafar ustoz (Qizlar & Bolalar)</p>
+          </div>
+        </div>
       </div>
-      <h2 class="font-academic text-2xl sm:text-3xl font-bold text-navy-900 mb-3">
-        Pedagogik Jamoa Ro‘yxati
-      </h2>
-      <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8 max-w-lg mx-auto">
-        Maktab o‘qituvchilari va pedagogik jamoasi ma’lumotlari qayta shakllantirilmoqda. Tez orada to‘liq ma’lumotlar joylashtiriladi.
-      </p>
-      <div class="flex items-center justify-center gap-4 flex-wrap">
-        <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs transition shadow-md">
-          <i class="fa-solid fa-house text-gold-400"></i>
-          <span>Bosh sahifaga qaytish</span>
-        </a>
-        <a href="rahbariyat.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gold-600 hover:bg-gold-500 text-navy-950 font-bold text-xs transition shadow-md">
-          <i class="fa-solid fa-user-tie"></i>
-          <span>Maktab rahbariyati</span>
-        </a>
-      </div>
+
+      <!-- BO'LIM 1: MATEMATIKA (3 TA USTOZ) -->
+      <section class="space-y-6">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-sm">
+              <i class="fa-solid fa-square-root-variable"></i>
+            </span>
+            <div>
+              <h2 class="font-academic text-2xl font-bold text-navy-900">Matematika Fani Ustozlari</h2>
+              <p class="text-xs text-slate-500">Mantiqiy fikrlash, aniq hisob-kitoblar va olimpiada tayyorgarligi</p>
+            </div>
+          </div>
+          <span class="text-xs font-bold text-indigo-600 bg-indigo-50 border border-indigo-200 px-3 py-1 rounded-full">
+            3 nafar o‘qituvchi
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- O'qituvchi 1: O'g'iloy -->
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition academic-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[11px] font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50 border border-indigo-200 px-2.5 py-1 rounded-full">
+                  Matematika
+                </span>
+                <span class="w-11 h-11 rounded-xl bg-navy-800 text-gold-400 font-crest font-bold text-base flex items-center justify-center shadow">
+                  O‘
+                </span>
+              </div>
+              <h3 class="font-academic text-xl font-bold text-navy-900">O‘g‘iloy</h3>
+              <p class="text-xs text-slate-500 font-medium mt-1">Matematika fani ustozi</p>
+              <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                O‘quvchilarda arifmetik va mantiqiy tafakkurni rivojlantirish, mustahkam poydevor shakllantirish bo‘yicha tajribali pedagog.
+              </p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-school text-gold-500"></i> 1-maktab</span>
+              <span class="text-indigo-600 font-semibold">Aniq fanlar</span>
+            </div>
+          </div>
+
+          <!-- O'qituvchi 2: Husan -->
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition academic-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[11px] font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50 border border-indigo-200 px-2.5 py-1 rounded-full">
+                  Matematika
+                </span>
+                <span class="w-11 h-11 rounded-xl bg-navy-800 text-gold-400 font-crest font-bold text-base flex items-center justify-center shadow">
+                  H
+                </span>
+              </div>
+              <h3 class="font-academic text-xl font-bold text-navy-900">Husan</h3>
+              <p class="text-xs text-slate-500 font-medium mt-1">Matematika fani ustozi</p>
+              <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                Algebra va geometriya darslari, mustaqil masalalar yechish hamda olimpiada to‘garaklari murabbiyi.
+              </p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-school text-gold-500"></i> 1-maktab</span>
+              <span class="text-indigo-600 font-semibold">Aniq fanlar</span>
+            </div>
+          </div>
+
+          <!-- O'qituvchi 3: Sodir -->
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition academic-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[11px] font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50 border border-indigo-200 px-2.5 py-1 rounded-full">
+                  Matematika
+                </span>
+                <span class="w-11 h-11 rounded-xl bg-navy-800 text-gold-400 font-crest font-bold text-base flex items-center justify-center shadow">
+                  S
+                </span>
+              </div>
+              <h3 class="font-academic text-xl font-bold text-navy-900">Sodir</h3>
+              <p class="text-xs text-slate-500 font-medium mt-1">Matematika fani ustozi</p>
+              <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                Murakkab matematik tenglamalar, fazoviy tasavvur va fan doirasidagi chuqurlashtirilgan mashg‘ulotlar ustozi.
+              </p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-school text-gold-500"></i> 1-maktab</span>
+              <span class="text-indigo-600 font-semibold">Aniq fanlar</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BO'LIM 2: ONA TILI VA ADABIYOT (2 TA USTOZ - ALOHIDA BO'LIM) -->
+      <section class="space-y-6">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-lg shadow-sm">
+              <i class="fa-solid fa-feather-pointed"></i>
+            </span>
+            <div>
+              <h2 class="font-academic text-2xl font-bold text-navy-900">Ona Tili va Adabiyot Fani Ustozlari</h2>
+              <p class="text-xs text-slate-500">Grammatika, savodxonlik, ifodali o‘qish va milliy adabiyot saboqlari</p>
+            </div>
+          </div>
+          <span class="text-xs font-bold text-emerald-600 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
+            2 nafar o‘qituvchi
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- O'qituvchi 1: Maftuna -->
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition academic-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[11px] font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full">
+                  Ona tili va adabiyot
+                </span>
+                <span class="w-11 h-11 rounded-xl bg-navy-800 text-gold-400 font-crest font-bold text-base flex items-center justify-center shadow">
+                  M
+                </span>
+              </div>
+              <h3 class="font-academic text-xl font-bold text-navy-900">Maftuna</h3>
+              <p class="text-xs text-slate-500 font-medium mt-1">Ona tili va adabiyot ustozi</p>
+              <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                O‘quvchilarda nutq madaniyati, adabiy til me’yorlari, insho yozish san’ati va ijodiy fikrlashni yuksaltiruvchi ustoz.
+              </p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-school text-gold-500"></i> 1-maktab</span>
+              <span class="text-emerald-600 font-semibold">Ona tili kafedrasi</span>
+            </div>
+          </div>
+
+          <!-- O'qituvchi 2: Aziza -->
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition academic-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[11px] font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full">
+                  Ona tili va adabiyot
+                </span>
+                <span class="w-11 h-11 rounded-xl bg-navy-800 text-gold-400 font-crest font-bold text-base flex items-center justify-center shadow">
+                  A
+                </span>
+              </div>
+              <h3 class="font-academic text-xl font-bold text-navy-900">Aziza</h3>
+              <p class="text-xs text-slate-500 font-medium mt-1">Ona tili va adabiyot ustozi</p>
+              <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                Ona tili qoidalari, mumtoz va zamonaviy o‘zbek adabiyoti durdonalarini o‘rgatuvchi tajribali fidoyi pedagog.
+              </p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-school text-gold-500"></i> 1-maktab</span>
+              <span class="text-emerald-600 font-semibold">Ona tili kafedrasi</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BO'LIM 3: TEXNOLOGIYA (MEHNAT TA'LIMI) -->
+      <section class="space-y-6">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center text-lg shadow-sm">
+              <i class="fa-solid fa-scissors"></i>
+            </span>
+            <div>
+              <h2 class="font-academic text-2xl font-bold text-navy-900">Texnologiya Fani Ustozlari</h2>
+              <p class="text-xs text-slate-500">Kasb-hunar ko‘nikmalari, amaliy ijodkorlik va zamonaviy texnologiyalar</p>
+            </div>
+          </div>
+          <span class="text-xs font-bold text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
+            2 nafar o‘qituvchi
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Qizlar uchun texnologiya: Gulbaxor Yo'lchiyeva -->
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition academic-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[11px] font-bold text-rose-600 uppercase tracking-wider bg-rose-50 border border-rose-200 px-2.5 py-1 rounded-full flex items-center gap-1.5">
+                  <i class="fa-solid fa-person-dress"></i> Qizlar uchun
+                </span>
+                <span class="w-11 h-11 rounded-xl bg-navy-800 text-gold-400 font-crest font-bold text-sm flex items-center justify-center shadow">
+                  GY
+                </span>
+              </div>
+              <h3 class="font-academic text-xl font-bold text-navy-900">Gulbaxor Yo‘lchiyeva</h3>
+              <p class="text-xs text-slate-500 font-medium mt-1">Qizlar uchun texnologiya fani ustozi</p>
+              <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                Tikuvchilik, to‘quvchilik, milliy hunarmandchilik, pazandachilik va qizlar uchun ro‘zg‘or madaniyati mashg‘ulotlari rahbari.
+              </p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-wand-magic-sparkles text-rose-500"></i> Amaliy san’at</span>
+              <span class="text-rose-600 font-semibold">Qizlar guruhi</span>
+            </div>
+          </div>
+
+          <!-- Bolalar uchun texnologiya: Gulsanam -->
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition academic-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[11px] font-bold text-blue-600 uppercase tracking-wider bg-blue-50 border border-blue-200 px-2.5 py-1 rounded-full flex items-center gap-1.5">
+                  <i class="fa-solid fa-wrench"></i> Bolalar uchun
+                </span>
+                <span class="w-11 h-11 rounded-xl bg-navy-800 text-gold-400 font-crest font-bold text-base flex items-center justify-center shadow">
+                  G
+                </span>
+              </div>
+              <h3 class="font-academic text-xl font-bold text-navy-900">Gulsanam</h3>
+              <p class="text-xs text-slate-500 font-medium mt-1">Bolalar uchun texnologiya fani ustozi</p>
+              <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                Texnik modellashtirish, duradgorlik, chizmachilik va bolalar uchun amaliy mehnat ko‘nikmalarini o‘rgatuvchi ustoz.
+              </p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-gears text-blue-500"></i> Texnik ijodiyot</span>
+              <span class="text-blue-600 font-semibold">Bolalar guruhi</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   </main>
 
