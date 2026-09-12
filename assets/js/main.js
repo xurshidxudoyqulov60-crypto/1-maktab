@@ -72,31 +72,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* --------------------------------------------------------------------------
-     2. BOTTOM TAB BAR (Spotlight Sliding Animation - Navigation Tabs V2)
+     2. BOTTOM TAB BAR (Active Tab State Management)
      -------------------------------------------------------------------------- */
-  const mobileTabBar = document.getElementById('mobile-tab-bar');
-  const tabSpotlight = document.querySelector('.tab-spotlight');
   const tabItems = document.querySelectorAll('.mobile-tab-item');
-
-  function updateSpotlight(index) {
-    if (tabSpotlight) {
-      requestAnimationFrame(() => {
-        tabSpotlight.style.transform = `translateX(${index * 100}%) translateZ(0)`;
-      });
-    }
-  }
-
-  // Sahifa yuklanganda active elementni topib unga nurni qaratish
-  tabItems.forEach((tab, index) => {
-    if (tab.classList.contains('active')) {
-      updateSpotlight(index);
-    }
-
-    tab.addEventListener('click', function(e) {
-      if (!this.getAttribute('data-action')) {
+  tabItems.forEach((tab) => {
+    tab.addEventListener('click', function() {
+      if (!this.getAttribute('data-action') && this.getAttribute('href') !== '#') {
         tabItems.forEach(t => t.classList.remove('active'));
         this.classList.add('active');
-        updateSpotlight(index);
       }
     });
   });

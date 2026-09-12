@@ -201,43 +201,9 @@ a, button, input, select, textarea, .mobile-tab-item, .fab-main-btn {
   }
 }
 
-/* Spotlight Glowing Cone from Top - Imperial Gold Luster */
+/* Spotlight Element - superseded by clean direct tab indicator */
 .tab-spotlight {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20%;
-  height: 100%;
-  pointer-events: none;
-  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
-  will-change: transform;
-  transform: translateZ(0);
-  z-index: 1;
-}
-
-.tab-spotlight::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 28px;
-  height: 3.5px;
-  background: linear-gradient(90deg, #F6D060, #E5A93C);
-  border-radius: 0 0 4px 4px;
-  box-shadow: 0 0 14px 3px rgba(246, 208, 96, 0.85);
-}
-
-.tab-spotlight::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 56px;
-  background: radial-gradient(ellipse at top, rgba(246, 208, 96, 0.45) 0%, rgba(229, 169, 60, 0.16) 45%, transparent 75%);
-  filter: blur(4px);
+  display: none !important;
 }
 
 .mobile-tab-item {
@@ -249,27 +215,49 @@ a, button, input, select, textarea, .mobile-tab-item, .fab-main-btn {
   color: #94A3B8;
   text-decoration: none;
   position: relative;
-  width: 20%;
+  flex: 1 1 0px;
   height: 100%;
   z-index: 2;
   border: none;
   background: transparent;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: color 0.2s ease;
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Active Tab ustidagi nafis oltin chiziq (100% to'g'ri markazlashgan va bug'larsiz) */
+.mobile-tab-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 26px;
+  height: 3px;
+  background: linear-gradient(90deg, #F6D060, #E5A93C);
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 2px 8px rgba(246, 208, 96, 0.85);
+  opacity: 0;
+  transition: transform 0.22s ease-out, opacity 0.22s ease-out;
+  pointer-events: none;
+}
+
+.mobile-tab-item.active::before {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
+}
+
 .mobile-tab-item i {
-  font-size: 18px;
-  transition: transform 0.25s ease, color 0.25s ease, filter 0.25s ease;
+  font-size: 17px;
+  transition: transform 0.2s ease, color 0.2s ease, filter 0.2s ease;
 }
 
 .mobile-tab-item span {
-  font-size: 9.5px;
+  font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.2px;
   line-height: 1;
-  transition: color 0.25s ease;
+  transition: color 0.2s ease;
 }
 
 .mobile-tab-item:hover {
@@ -277,7 +265,7 @@ a, button, input, select, textarea, .mobile-tab-item, .fab-main-btn {
 }
 
 .mobile-tab-item.active {
-  color: #F6D060;
+  color: #F6D060 !important;
 }
 
 .mobile-tab-item.active i {
