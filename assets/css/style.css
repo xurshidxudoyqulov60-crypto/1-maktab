@@ -707,6 +707,7 @@ a, button, input, select, textarea, .mobile-tab-item, .fab-main-btn {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     transform: translateZ(0);
+    border-bottom: 1px solid rgba(246, 208, 96, 0.25) !important;
   }
 
   .grid-menu-modal,

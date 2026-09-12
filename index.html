@@ -53,7 +53,7 @@
 <body class="bg-[#F8FAFC] text-slate-800 antialiased flex flex-col min-h-screen">
 
   <!-- TOP BAR (Rasmiy axborot va jonli holat paneli) -->
-  <div class="bg-navy-900 text-slate-300 text-xs border-b border-navy-700/60 py-2 px-4">
+  <div class="hidden sm:block bg-navy-900 text-slate-300 text-xs border-b border-navy-700/60 py-2 px-4">
     <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2.5">
       <div class="flex items-center flex-wrap gap-x-6 gap-y-1">
         <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-gold-500"></i> Bekobod shahar 1-umumiy o‘rta ta'lim maktabi</span>
@@ -89,16 +89,16 @@
   <!-- NAVBAR -->
   <header class="sticky top-0 z-50 header-glass shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20">
+      <div class="flex justify-between items-center h-16 sm:h-20">
         
         <!-- LOGO -->
-        <a href="index.html" class="flex items-center gap-3 group">
-          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 border border-gold-500/50 flex items-center justify-center shadow-md group-hover:border-gold-400 transition">
-            <i class="fa-solid fa-graduation-cap text-gold-500 text-2xl group-hover:scale-110 transition duration-200"></i>
+        <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 min-w-0 group">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 border border-gold-500/50 flex items-center justify-center shadow-md flex-shrink-0 group-hover:border-gold-400 transition">
+            <i class="fa-solid fa-graduation-cap text-gold-500 text-xl sm:text-2xl group-hover:scale-110 transition duration-200"></i>
           </div>
-          <div>
-            <span class="block font-crest text-lg font-bold tracking-wider text-white uppercase leading-tight">1-MAKTAB</span>
-            <span class="block text-[11px] text-gold-400 font-medium tracking-widest uppercase">Bekobod shahar 1-umumiy o‘rta ta'lim maktabi</span>
+          <div class="min-w-0">
+            <span class="block font-crest text-sm sm:text-base md:text-lg font-bold tracking-wider text-white uppercase leading-tight truncate">1-SONLI MAKTAB</span>
+            <span class="block text-[10px] sm:text-[11px] text-gold-400 font-medium tracking-wide uppercase truncate">Bekobod shahar</span>
           </div>
         </a>
 
@@ -198,9 +198,9 @@
           </a>
 
           <!-- Mobil Aloqa tugmasi (Faqat mobil va planshetda - 3 qatorli menyu o'rniga) -->
-          <div class="flex xl:hidden items-center">
-            <a href="aloqa.html" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-bold text-xs shadow-md transition border border-gold-400/40">
-              <i class="fa-solid fa-headset text-navy-900 text-sm"></i>
+          <div class="flex xl:hidden items-center flex-shrink-0">
+            <a href="aloqa.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-bold text-xs shadow-md transition border border-gold-400/40">
+              <i class="fa-solid fa-headset text-navy-900 text-xs sm:text-sm"></i>
               <span>Aloqa</span>
             </a>
           </div>
@@ -247,6 +247,10 @@
           <a href="oqituvchilar.html" class="px-3.5 py-2.5 rounded-xl text-slate-200 hover:text-white hover:bg-navy-700/40 text-sm flex items-center gap-3 transition">
             <i class="fa-solid fa-chalkboard-user w-4 text-center text-gold-500"></i> Ustozlar (O‘qituvchilar)
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- MOBIL PASTKI TAB BAR (Modern Academic - Faqat mobil va planshetda ko'rinadi) -->
   <nav id="mobile-tab-bar" class="mobile-tab-bar xl:hidden">
